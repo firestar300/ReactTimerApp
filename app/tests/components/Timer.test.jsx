@@ -18,7 +18,7 @@ describe('Timer', () => {
     expect(timer.state.count).toBe(0);
 
     setTimeout(() => {
-      expect(timer.state.timerStatus).toBe('started');
+      expect(timer.state.countdownStatus).toBe('started');
       expect(timer.state.count).toBe(1);
       done();
     }, 1001);
@@ -32,7 +32,7 @@ describe('Timer', () => {
     timer.handleStatusChange('paused');
 
     setTimeout(() => {
-      expect(timer.state.timerStatus).toBe('paused');
+      expect(timer.state.countdownStatus).toBe('paused');
       expect(timer.state.count).toBe(10);
       done();
     }, 1001);
@@ -46,7 +46,7 @@ describe('Timer', () => {
     timer.handleStatusChange('stopped');
 
     setTimeout(() => {
-      expect(timer.state.timerStatus).toBe('stopped');
+      expect(timer.state.countdownStatus).toBe('stopped');
       expect(timer.state.count).toBe(0);
       done();
     }, 1001);

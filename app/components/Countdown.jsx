@@ -58,7 +58,7 @@ var Countdown = React.createClass({
     })
   },
   render: function() {
-    var {count, countdownStatus} = this.state;
+    var {count, countdownStatus, timerStatus} = this.state;
 
     var countdownRender = () => {
       if(countdownStatus !== 'stopped') {
